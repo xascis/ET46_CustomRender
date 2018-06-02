@@ -13,8 +13,18 @@ namespace ET46_CustomRender
 		{
 			InitializeComponent();
 
-			MainPage = new ET46_CustomRender.MainPage();
-		}
+            //MainPage = new ET46_CustomRender.MainPage();
+            MainPage = new ET46_CustomRender.PelotaBota();
+
+            //MainPage = new ContentPage
+            //{
+            //    Content = new VistaHola
+            //    {
+            //        VerticalOptions = LayoutOptions.Center,
+            //        HorizontalOptions = LayoutOptions.Center
+            //    }
+            //};
+        }
 
 		protected override void OnStart ()
 		{

@@ -4,8 +4,20 @@
              xmlns:local="clr-namespace:ET46_CustomRender"
              x:Class="ET46_CustomRender.MainPage">
 
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <Grid>
+        <local:EllipseView Color="Aqua" />
+        <StackLayout>
+            <StackLayout.Padding>
+                <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
+            </StackLayout.Padding>
+            <local:EllipseView Color="Red" WidthRequest="40" HeightRequest="80" HorizontalOptions="Center" />
+            <local:EllipseView Color="Green" WidthRequest="160" HeightRequest="80" HorizontalOptions="Start" />
+            <local:EllipseView Color="Blue" WidthRequest="160" HeightRequest="80" HorizontalOptions="End" />
+            <local:EllipseView Color="#80FF0000" HorizontalOptions="Center" />
+            <ContentView Padding="50" VerticalOptions="FillAndExpand">
+                <local:EllipseView Color="Red" BackgroundColor="#80FF0000" />
+            </ContentView>
+        </StackLayout>
+    </Grid>
 
 </ContentPage>
